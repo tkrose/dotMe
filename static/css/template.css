@@ -1,5 +1,19 @@
 h1 {
 	text-align: center;
 	font-size: 300%;
-	margin-bottom: 1em;
+	font-family: "Oswald"
+}
+
+h2 {
+	text-align: center;
+	font-size: 200%;
+	font-family: "Oswald"
+}
+
+body {
+	font-family: "Open Sans"
+}
+
+a {
+	color: black
 }

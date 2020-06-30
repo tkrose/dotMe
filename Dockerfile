@@ -1,5 +1,5 @@
 #Pulled from https://github.com/IBM/deploy-python-openshift-tutorial (I don't know if it's right)
-from alpine:latest
+FROM alpine:latest
 RUN apk add --no-cache python3-dev \
     && pip3 install --upgrade pip
 

@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 
-{% extends 'template.html' %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
 
-{% block content %}
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
 		<title>Home Page</title>
 	</head>
-	<body>
-		<h2> My First Try Using Flask </h2>
-		<p> Flask is Fun. Go to /getData for a suprise!</p>
-	</body>
+	<div class="container">
+		<nav>
+			<a class="logo" href="{{ url_for('home') }}">TKROSE</a>
+		</nav>
+	</div>
+	<header>
+		<div class="container">
+		  <nav>
+			<a href="{{ url_for('about') }}">About</a>
+		  </nav>
+		</div>
+	  </header>
 </html>
-{% endblock %}

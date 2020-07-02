@@ -2,27 +2,19 @@
 <html lang="en" dir="ltr">
  <head>
    <meta charset="utf-8">
-   <title>Flask Parent Template</title>
+   <title>Talia's Part of the Internet</title>
 
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
    <link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+   
  </head>
  <body>
     <header>
       <div class="container">
-        <strong><nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <strong><nav>
           <a class="menu" href="{{ url_for('home') }}">TKROSE</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
-            </div>
-          </div>
+          <a href="{{ url_for('about') }}">About</a>
         </nav></strong>
         <h1 class="logo">First Web App</h1>
       </div>

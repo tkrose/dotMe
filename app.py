@@ -27,5 +27,13 @@ def getData():
     return text
 
 
+@app.route("/printYML")
+def printYML():
+    f = open('requirements.yml', 'r')
+    reqs = f.read()
+    f.close()
+    return reqs
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080, debug=True)

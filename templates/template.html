@@ -1,26 +1,38 @@
  <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<div class="wrapper"></div>
  <head>
    <meta charset="utf-8">
-   <title>Talia's Part of the Internet</title>
+   <title>{{title}} - Talia's Part of the Internet</title>
 
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
    <link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
-   
  </head>
  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <a class="logo" href="{{ url_for('home') }}">TKROSE</a>
-        </nav>
+   <div id="wavy-background">
+      <header>
+        <div class="container">
+          <nav>
+            <a class="logo" href="{{ url_for('home') }}">TKROSE</a>
+          </nav>
+        </div>
+      </header>
+      
+      <div id="page-content">
+        <!-- 
+          "block pageContent" when using Flask would be anything you want displayed
+          on each specific page (since it is being placed into a template - you did this by using "extends" template.html
+          on your individual pages) 
+
+          IF you add a new page: don't forget to define that block within the respective html file. 
+          Ex. home.html would contain a block named: pageContent & down below on this page you 
+          can see it referenced (meaning: use that html content here)
+        -->
+        {% block pageContent %}
+        {% endblock %}
+
       </div>
-    </header>
-    
-    {% block content %}
-    {% endblock %}
+    </div>
     
  </body>
 </html>

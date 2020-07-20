@@ -8,12 +8,28 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    """
+        Added a pageVars dictionary to hold any variables or items that
+        you'd like to pass over to the template file (accessable from either template.html or the "extended" pages
+        i.e. home.html and about.html)
+    """
+    pageVars = {
+        "title": "Home"
+    }
+    return render_template("home.html", **pageVars)
 
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    """
+        Added a pageVars dictionary to hold any variables or items that
+        you'd like to pass over to the template file (accessable from either template.html or the "extended" pages
+        i.e. home.html and about.html)
+    """
+    pageVars = {
+        "title": "About"
+    }
+    return render_template("about.html", **pageVars)
 
 
 @app.route("/getData")

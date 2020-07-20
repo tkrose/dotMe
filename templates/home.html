@@ -1,24 +1,16 @@
-<!DOCTYPE html>
+{% extends 'template.html' %}
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-<link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
-
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>Home Page</title>
-	</head>
+<!-- 
+	As you can see all page content goes in between {% block pageContent %} and {% endblock %}
+	No need to redefine <html> or <head> again (since block pageContent will be placed into template.html
+	specifically within the newly added <div id="page-content"></div>)
+-->
+{% block pageContent %}
+<header>
 	<div class="container">
 		<nav>
-			<a class="logo" href="{{ url_for('home') }}">TKROSE</a>
+		<a href="{{ url_for('about') }}">About</a>
 		</nav>
 	</div>
-	<header>
-		<div class="container">
-		  <nav>
-			<a href="{{ url_for('about') }}">About</a>
-		  </nav>
-		</div>
-	  </header>
-</html>
+</header>
+{% endblock %}
